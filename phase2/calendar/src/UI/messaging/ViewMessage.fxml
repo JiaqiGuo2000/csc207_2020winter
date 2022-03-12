@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<GridPane fx:id="gridPane"
+          xmlns="http://javafx.com/javafx/10.0.2-internal"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="UI.messaging.ViewMessage"
+          alignment="CENTER" hgap="20" vgap="10">
+
+    <Label text="From: "
+           GridPane.halignment="RIGHT" GridPane.rowIndex="0" />
+    <Label fx:id="sender"
+           GridPane.rowIndex="0" GridPane.columnIndex="1" />
+    <Label text="Event: "
+           GridPane.halignment="RIGHT" GridPane.rowIndex="1"/>
+    <Label fx:id="event"
+           GridPane.rowIndex="1" GridPane.columnIndex="1" />
+    <Button text="Accept" onAction="#accept"
+            prefWidth="60"
+            GridPane.rowIndex="1" GridPane.columnIndex="2" />
+    <Label fx:id="message" wrapText="true"
+           alignment="TOP_LEFT" textAlignment="JUSTIFY"
+           minWidth="250" prefWidth="250"
+           GridPane.rowIndex="2" GridPane.columnSpan="2" />
+    <Button text="Reply" onAction="#reply"
+            prefWidth="60"
+            GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM" GridPane.rowIndex="2" GridPane.columnIndex="2" />
+
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+    </padding>
+</GridPane>

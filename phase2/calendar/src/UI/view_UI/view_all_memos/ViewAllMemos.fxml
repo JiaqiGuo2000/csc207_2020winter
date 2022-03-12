@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="410.0" style="-fx-background-color: lightyellow;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.view_UI.view_all_memos.ViewAllMemosController">
+   <children>
+      <SplitPane dividerPositions="0.1306532663316583" orientation="VERTICAL" prefHeight="400.0" prefWidth="410.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: lightblue;">
+               <children>
+                  <Label layoutX="79.0" layoutY="7.0" prefHeight="36.0" text="All Memos In Current Calendar" textFill="#0e49b5">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ListView fx:id="listView" layoutX="40.0" layoutY="-6.0" prefHeight="348.0" prefWidth="331.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="163.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.add_UI.add_alert.CreateAlertController">
+    <children>
+        <SplitPane dividerPositions="0.31875" orientation="VERTICAL" prefHeight="162.0" prefWidth="600.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="60.0" prefWidth="598.0" style="-fx-background-color: lightblue;">
+                    <children>
+                        <Label layoutX="115.0" layoutY="4.0" prefHeight="41.0" text="Alert:" textFill="#3c599e">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="alertName" layoutX="185.0" layoutY="6.0" prefHeight="35.0" prefWidth="320.0" promptText="Put your message here..." style="-fx-background-color: white;">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </TextField>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="144.0" prefWidth="598.0">
+                    <children>
+                        <SplitPane prefHeight="125.0" prefWidth="598.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="109.0" prefWidth="596.0">
+                                    <children>
+                                        <Button fx:id="confirm1" layoutX="486.0" layoutY="68.0" mnemonicParsing="false" onAction="#confirmAlert" prefHeight="27.0" prefWidth="69.0" style="-fx-background-color: #e4e4e4#e4e4e4;" text="Create" />
+                                        <Label layoutX="131.0" layoutY="26.0" prefHeight="27.0" prefWidth="63.0" text="Time:" />
+                                        <HBox layoutX="170.0" layoutY="26.0" prefHeight="35.0" prefWidth="377.0">
+                                            <children>
+                                                <DatePicker fx:id="DP" prefHeight="27.0" prefWidth="181.0" />
+                                                <Label text="       " />
+                                                <TextField fx:id="Hour" prefHeight="27.0" prefWidth="45.0" promptText="HH" />
+                                                <Label prefHeight="27.0" prefWidth="12.0" text=" :" />
+                                                <TextField fx:id="Min" prefHeight="27.0" prefWidth="45.0" promptText="mm" />
+                                                <Label prefHeight="27.0" prefWidth="14.0" text=" :" />
+                                                <TextField fx:id="Sec" prefHeight="27.0" prefWidth="45.0" promptText="ss" />
+                                            </children>
+                                        </HBox>
+                                        <Label fx:id="status" layoutX="49.0" layoutY="68.0" prefHeight="27.0" prefWidth="82.0" textFill="#e10c0c" />
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+
+</AnchorPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="332.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.add_UI.add_to_series.AddToSeriesController">
+    <children>
+        <SplitPane dividerPositions="0.1782477341389728" layoutX="1.0" orientation="VERTICAL" prefHeight="333.0" prefWidth="319.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="59.0" prefWidth="317.0" style="-fx-background-color: lightblue;">
+                    <children>
+                        <Label layoutX="93.0" layoutY="8.0" prefHeight="41.0" text="Add To Series" textFill="#3c599e">
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="260.0" prefWidth="317.0">
+                    <children>
+                            <Button fx:id="confirm" layoutX="216.0" layoutY="227.0" mnemonicParsing="false" onAction="#confirm" prefHeight="27.0" prefWidth="69.0" style="-fx-background-color: ##e4e4e4;" text="Add" />
+                            <ListView fx:id="listView" layoutX="42.0" layoutY="46.0" prefHeight="167.0" prefWidth="243.0" />
+                            <Label layoutX="42.0" layoutY="14.0" prefHeight="27.0" prefWidth="243.0" text="Click and add to one or more existing series" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

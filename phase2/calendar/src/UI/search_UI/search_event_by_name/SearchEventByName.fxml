@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="327.0" prefWidth="305.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.search_UI.search_event_by_name.SearchEventByNameController">
+    <children>
+        <Label layoutX="33.0" layoutY="28.0" prefHeight="27.0" prefWidth="87.0" text="Target Name:" />
+        <TextField fx:id="targetName" layoutX="131.0" layoutY="28.0" prefHeight="27.0" prefWidth="139.0" />
+        <Button fx:id="searchButton" layoutX="202.0" layoutY="263.0" mnemonicParsing="false" onAction="#searchEventByName" prefHeight="28.0" prefWidth="65.0" text="Search" />
+      <ListView fx:id="listView" layoutX="33.0" layoutY="77.0" prefHeight="172.0" prefWidth="237.0" />
+      <Label fx:id="status" layoutX="137.0" layoutY="291.0" prefHeight="27.0" prefWidth="130.0" textFill="#e40808" />
+    </children>
+</AnchorPane>

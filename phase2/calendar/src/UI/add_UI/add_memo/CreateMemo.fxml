@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="394.0" prefWidth="371.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.add_UI.add_memo.CreateMemoController">
+    <children>
+        <SplitPane dividerPositions="0.09948979591836735" orientation="VERTICAL" prefHeight="472.0" prefWidth="408.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="34.0" prefWidth="364.0" style="-fx-background-color: lightblue;">
+                    <children>
+                        <Label layoutX="148.0" layoutY="2.0" prefHeight="41.0" text="New Memo" textFill="#3c599e">
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="345.0" prefWidth="369.0">
+                    <children>
+                  <SplitPane dividerPositions="0.3213429256594724" orientation="VERTICAL" prefHeight="419.0" prefWidth="406.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                                        <TextArea fx:id="contentTA" layoutX="32.0" layoutY="35.0" prefHeight="82.0" prefWidth="340.0" />
+                                        <Label layoutX="14.0" prefHeight="33.0" prefWidth="220.0" text="Option 1: create a new memo here" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="128.0" prefWidth="278.0">
+                           <children>
+                                        <Button fx:id="confirm" layoutX="304.0" layoutY="238.0" mnemonicParsing="false" onAction="#confirmMemo" prefHeight="27.0" prefWidth="69.0" style="-fx-background-color: #e4e4e4;" text="Add" />
+                              <ListView fx:id="listView" layoutX="33.0" layoutY="28.0" prefHeight="198.0" prefWidth="340.0" />
+                              <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="273.0" text="Option 2: click existing memos and add" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.login.LoginController">
+   <children>
+      <BorderPane prefHeight="426.0" prefWidth="647.0">
+         <left>
+            <Pane prefHeight="426.0" prefWidth="280.0" style="-fx-background-color: #02275b;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="184.0" fitWidth="243.0" layoutX="48.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cs.jpeg" />
+                     </image></ImageView>
+               </children></Pane>
+         </left>
+         <center>
+            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="29.0" prefWidth="367.0" />
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TextField id="username " fx:id="username" layoutX="64.0" layoutY="134.0" prefHeight="33.0" prefWidth="223.0" promptText="Username" />
+                        <PasswordField fx:id="password" layoutX="64.0" layoutY="206.0" prefHeight="33.0" prefWidth="223.0" promptText="Password" />
+                        <Button fx:id="button" layoutX="193.0" layoutY="275.0" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="94.0" text="Sign in" />
+                        <Hyperlink fx:id="hyperlink_account" layoutX="113.0" layoutY="346.0" onAction="#createAccount" prefHeight="20.0" prefWidth="125.0" text="Create an account" />
+                        <Label layoutX="64.0" layoutY="76.0" prefHeight="38.0" prefWidth="75.0" text="Sign in" textFill="#02275b">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Warning" layoutX="65.0" layoutY="277.0" prefHeight="30.0" prefWidth="115.0" textFill="#eb0a0a" />
+                     </children></Pane>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

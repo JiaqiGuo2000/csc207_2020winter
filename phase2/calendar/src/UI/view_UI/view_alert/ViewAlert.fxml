@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="167.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.view_UI.view_alert.ViewAlertController">
+    <children>
+        <SplitPane dividerPositions="0.325" orientation="VERTICAL" prefHeight="162.0" prefWidth="600.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="134.0" prefWidth="501.0" style="-fx-background-color: lightblue;">
+                    <children>
+                        <Label layoutX="154.0" layoutY="4.0" prefHeight="41.0" prefWidth="63.0" text="Alert:" textFill="#123786">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                  <TextField fx:id="alertName" layoutX="224.0" layoutY="7.0" prefHeight="35.0" prefWidth="226.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="144.0" prefWidth="598.0">
+                    <children>
+                        <SplitPane dividerPositions="0.274" prefHeight="125.0" prefWidth="598.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <Button layoutX="32.0" layoutY="14.0" mnemonicParsing="false" onAction="#edit" prefHeight="27.0" prefWidth="96.0" text="Edit Alert" />
+                                        <Button layoutX="32.0" layoutY="62.0" mnemonicParsing="false" onAction="#delete" prefHeight="27.0" prefWidth="96.0" text="Delete Alert" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="214.0" prefWidth="429.0">
+                                    <children>
+                                        <Button fx:id="confirm" layoutX="316.0" layoutY="62.0" mnemonicParsing="false" onAction="#confirm" prefHeight="27.0" prefWidth="79.0" text="Confirm" />
+                              <Label layoutX="24.0" layoutY="12.0" prefHeight="27.0" prefWidth="63.0" text="Time:" />
+                              <HBox layoutX="87.0" layoutY="12.0" prefHeight="32.0" prefWidth="316.0">
+                                 <children>
+                                    <DatePicker fx:id="DP" prefHeight="27.0" prefWidth="158.0" />
+                                    <Label text="       " />
+                                    <TextField fx:id="Hour" prefHeight="27.0" prefWidth="34.0" promptText="HH" />
+                                    <Label prefHeight="27.0" prefWidth="12.0" text=" :" />
+                                    <TextField fx:id="Min" prefHeight="27.0" prefWidth="33.0" promptText="mm" />
+                                    <Label prefHeight="27.0" prefWidth="14.0" text=" :" />
+                                    <TextField fx:id="Sec" prefHeight="27.0" prefWidth="34.0" promptText="ss" />
+                                 </children>
+                              </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

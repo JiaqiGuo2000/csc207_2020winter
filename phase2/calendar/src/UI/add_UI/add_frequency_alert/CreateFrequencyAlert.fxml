@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="314.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.add_UI.add_frequency_alert.CreateFrequencyAlertController">
+    <children>
+        <SplitPane dividerPositions="0.18153846153846154" orientation="VERTICAL" prefHeight="314.0" prefWidth="600.0">
+            <items>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="61.0" prefWidth="598.0" style="-fx-background-color: lightblue;">
+                        <children>
+                        <Label layoutX="219.0" layoutY="7.0" prefHeight="41.0" text="Frequency Alert" textFill="#3c599e">
+                            <font>
+                                <Font name="System Bold Italic" size="20.0" />
+                            </font>
+                        </Label>
+                        </children>
+                    </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="144.0" prefWidth="598.0">
+               <children>
+                            <Label layoutX="107.0" layoutY="95.0" text="Initial Time" />
+                            <HBox layoutX="195.0" layoutY="85.0" prefHeight="35.0" prefWidth="348.0">
+                                <children>
+                                    <DatePicker fx:id="FreDP" prefHeight="27.0" prefWidth="181.0" />
+                                    <Label text="       " />
+                                    <TextField fx:id="FreHour" prefHeight="27.0" prefWidth="34.0" promptText="HH">
+                           <font>
+                              <Font size="12.0" />
+                           </font></TextField>
+                                    <Label prefHeight="27.0" prefWidth="12.0" text=" :" />
+                                    <TextField fx:id="FreMin" prefHeight="27.0" prefWidth="36.0" promptText="mm">
+                           <font>
+                              <Font size="12.0" />
+                           </font></TextField>
+                                    <Label prefHeight="27.0" prefWidth="14.0" text=" :" />
+                                    <TextField fx:id="FreSec" prefHeight="27.0" prefWidth="32.0" promptText="ss">
+                           <font>
+                              <Font size="12.0" />
+                           </font></TextField>
+                                </children>
+                            </HBox>
+                  <TextField fx:id="freqAlertName" layoutX="195.0" layoutY="37.0" prefHeight="27.0" prefWidth="226.0" promptText="Put your message here..." />
+                  <Label layoutX="87.0" layoutY="43.0" text="Alert Message" />
+                  <Button layoutX="463.0" layoutY="193.0" mnemonicParsing="false" onAction="#confirmFrequencyAlert" prefHeight="27.0" prefWidth="69.0" text="Create" />
+                  <Label layoutX="120.0" layoutY="143.0" text="Duration" />
+                  <HBox layoutX="195.0" layoutY="137.0" prefHeight="27.0" prefWidth="337.0">
+                     <children>
+                        <TextField fx:id="DurationDays" prefHeight="27.0" prefWidth="47.0" />
+                        <Label prefHeight="27.0" prefWidth="69.0" text="  Days   " />
+                        <TextField fx:id="DurationHours" layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="47.0" />
+                        <Label layoutX="57.0" layoutY="10.0" prefHeight="27.0" prefWidth="69.0" text="  Hours" />
+                        <TextField fx:id="DurationMin" layoutX="101.0" layoutY="10.0" prefHeight="27.0" prefWidth="47.0" />
+                        <Label layoutX="148.0" layoutY="10.0" prefHeight="27.0" prefWidth="61.0" text="  Minutes" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="FreStatus" layoutX="52.0" layoutY="193.0" prefHeight="35.0" prefWidth="109.0" textFill="#e40e0e" />
+               </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+
+</AnchorPane>

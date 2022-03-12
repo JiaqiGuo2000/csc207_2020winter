@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<GridPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.messaging.SendMessage"
+          alignment="CENTER" hgap="20" vgap="10">
+
+    <Label text="To: " GridPane.halignment="RIGHT" />
+    <TextField fx:id="receiver" promptText="receiver" GridPane.columnIndex="1" />
+    <Label text="Event: " GridPane.halignment="RIGHT" GridPane.rowIndex="1"/>
+    <TextField fx:id="event" promptText="(optional)" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+    <TextArea fx:id="message" promptText="message (optional)" wrapText="true"
+              GridPane.rowIndex="2" GridPane.columnSpan="2" />
+    <Button text="Send" onAction="#send" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.columnSpan="2" />
+
+<padding>
+    <Insets bottom="20.0" left="30.0" right="30.0" top="30.0" />
+</padding>
+</GridPane>

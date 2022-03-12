@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="773.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.main_window.MainWindowController">
+   <children>
+      <BorderPane layoutX="1.0" prefHeight="772.0" prefWidth="821.0">
+         <left>
+            <TabPane prefHeight="589.0" prefWidth="192.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Calendars">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="192.0">
+                           <children>
+                              <SplitPane dividerPositions="0.49728260869565216" layoutX="-15.0" orientation="VERTICAL" prefHeight="738.0" prefWidth="209.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="362.0" prefWidth="210.0">
+                                       <children>
+                                          <Button fx:id="newCalendarButton" layoutX="21.0" layoutY="14.0" mnemonicParsing="false" onAction="#createNewCalendar" prefHeight="27.0" prefWidth="19.0" text="+" />
+                                          <TextField fx:id="newCalendarTF" layoutX="62.0" layoutY="14.0" prefHeight="27.0" prefWidth="131.0" />
+                                          <ListView fx:id="listView" fixedCellSize="0.0" layoutX="11.0" layoutY="62.0" prefHeight="302.0" prefWidth="196.0" />
+                                          <HBox layoutX="48.0" layoutY="41.0" prefHeight="19.0" prefWidth="185.0">
+                                             <children>
+                                                <Label prefHeight="17.0" prefWidth="55.0" text="Status:" />
+                                                <Label fx:id="status" prefHeight="19.0" prefWidth="104.0" text="Read-only" textFill="#9e1a1a" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="407.0" prefWidth="207.0" style="-fx-background-color: white;">
+                                       <children>
+                                          <Label layoutX="63.0" layoutY="6.0" text="Event Series:" />
+                                          <ListView fx:id="seriesListView" layoutX="14.0" layoutY="23.0" prefHeight="339.0" prefWidth="195.0" />
+                                       </children></AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="optionTabPane" text="Options">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button layoutX="15.0" layoutY="172.0" mnemonicParsing="false" onAction="#viewAllMemos" prefHeight="27.0" prefWidth="166.0" text="View all memos" />
+                              <Button layoutX="15.0" layoutY="137.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="25.0" prefWidth="166.0" text="Send Message" />
+                              <Button fx:id="searchEventByDateButton" layoutX="15.0" layoutY="31.0" mnemonicParsing="false" onAction="#searchEventByDate" prefHeight="24.0" prefWidth="165.0" text="Search Event By Date" />
+                              <Button layoutX="15.0" layoutY="207.0" mnemonicParsing="false" onAction="#timeMagic" prefHeight="27.0" prefWidth="166.0" text="Time magic" />
+                              <Button fx:id="searchEventByNameButton" layoutX="14.0" layoutY="65.0" mnemonicParsing="false" onAction="#searchEventByName" prefHeight="24.0" prefWidth="165.0" text="Search Event By Name" />
+                              <Button fx:id="searchEventByTagButton" layoutX="14.0" layoutY="101.0" mnemonicParsing="false" onAction="#searchEventByTag" prefHeight="24.0" prefWidth="165.0" text="Search Event By Tag" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </left>
+         <center>
+            <SplitPane dividerPositions="0.06270411495754409" orientation="VERTICAL" prefHeight="537.0" prefWidth="431.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="69.0" prefWidth="627.0">
+                     <children>
+                        <Button fx:id="addEventButton" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" onAction="#createNewEvent" text="Add Event" />
+                        <Button fx:id="addSeries" layoutX="110.0" layoutY="9.0" mnemonicParsing="false" onAction="#createNewSeries" text="Add Series" />
+                        <ImageView fx:id="logOffButton" fitHeight="30.0" fitWidth="28.0" layoutX="585.0" layoutY="8.0" onMouseClicked="#logOff" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@purple_shutdown_flag_icon_vector_281494.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <SplitPane dividerPositions="0.04985754985754986" orientation="VERTICAL" prefHeight="704.0" prefWidth="628.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <CheckBox fx:id="pastCheckbox" layoutX="103.0" layoutY="6.0" mnemonicParsing="false" text="Past Events" />
+                                    <CheckBox fx:id="ongoingCheckbox" layoutX="210.0" layoutY="7.0" mnemonicParsing="false" text="Ongoing Events" />
+                                    <CheckBox fx:id="futureCheckbox" layoutX="344.0" layoutY="7.0" mnemonicParsing="false" text="Future Events" />
+                                    <Label layoutX="8.0" layoutY="6.0" prefHeight="17.0" prefWidth="120.0" text="List of Events" />
+                                 </children></AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="654.0" prefWidth="634.0">
+                                 <children>
+                                    <ListView fx:id="eventsListView" fixedCellSize="40.0" prefHeight="655.0" prefWidth="626.0" />
+                                    <ScrollBar layoutX="607.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="900.0" prefWidth="17.0" />
+                                 </children></AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+         </center></BorderPane>
+   </children>
+</AnchorPane>

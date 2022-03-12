@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="633.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.view_UI.view_event.ViewEventController">
+   <children>
+      <SplitPane dividerPositions="0.11700468018720749" layoutX="-3.0" orientation="VERTICAL" prefHeight="643.0" prefWidth="761.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="606.0">
+               <children>
+                  <AnchorPane prefHeight="77.0" prefWidth="706.0">
+                     <children>
+                        <Label layoutX="22.0" layoutY="6.0" prefHeight="24.0" prefWidth="84.0" text="Event Name:" />
+                        <Label layoutX="307.0" layoutY="6.0" prefHeight="24.0" prefWidth="69.0" text="Start time:" />
+                        <TextField fx:id="nameTF" layoutX="106.0" layoutY="5.0" />
+                        <Label layoutX="307.0" layoutY="40.0" prefHeight="24.0" prefWidth="69.0" text="  End time:" />
+                        <Button fx:id="confirm" layoutX="22.0" layoutY="39.0" mnemonicParsing="false" onAction="#confirm" prefHeight="27.0" prefWidth="69.0" style="-fx-background-color: transparent;" />
+                        <HBox layoutX="387.0" layoutY="37.0" prefHeight="32.0" prefWidth="316.0">
+                           <children>
+                              <DatePicker fx:id="endDP" prefHeight="27.0" prefWidth="158.0" />
+                              <Label text="       " />
+                              <TextField fx:id="EHour" prefHeight="27.0" prefWidth="34.0" />
+                              <Label prefHeight="27.0" prefWidth="12.0" text=":" />
+                              <TextField fx:id="EMin" prefHeight="27.0" prefWidth="33.0" />
+                              <Label prefHeight="27.0" prefWidth="14.0" text=":" />
+                              <TextField fx:id="ESec" prefHeight="27.0" prefWidth="34.0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="387.0" layoutY="3.0" prefHeight="32.0" prefWidth="316.0">
+                           <children>
+                              <DatePicker fx:id="startDP" prefHeight="27.0" prefWidth="158.0" />
+                              <Label text="       " />
+                              <TextField fx:id="SHour" prefHeight="27.0" prefWidth="34.0" />
+                              <Label prefHeight="27.0" prefWidth="12.0" text=":" />
+                              <TextField fx:id="SMin" prefHeight="27.0" prefWidth="33.0" />
+                              <Label prefHeight="27.0" prefWidth="14.0" text=":" />
+                              <TextField fx:id="SSec" prefHeight="27.0" prefWidth="34.0" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="Warning" layoutX="179.0" layoutY="44.0" prefHeight="17.0" prefWidth="117.0" textFill="#eb0707" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="599.0" prefWidth="706.0">
+               <children>
+                  <SplitPane dividerPositions="0.06578947368421052" orientation="VERTICAL" prefHeight="556.0" prefWidth="759.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="55.0" prefWidth="606.0">
+                           <children>
+                              <ToolBar layoutX="-1.0" layoutY="-4.0" prefHeight="40.0" prefWidth="758.0">
+                                <items>
+                                    <Button fx:id="addAlert" mnemonicParsing="false" onAction="#addIndividualAlert" prefHeight="27.0" prefWidth="139.0" text="Add Individual Alert" />
+                                    <Button mnemonicParsing="false" onAction="#addFrequencyAlert" text="Add Frequency Alert" />
+                                    <Button fx:id="addMemo" mnemonicParsing="false" onAction="#addMemo" prefHeight="27.0" prefWidth="85.0" text="Add Memo" />
+                                    <Button mnemonicParsing="false" onAction="#addTag" prefHeight="27.0" prefWidth="70.0" text="Add Tag" />
+                                    <Button fx:id="addToSeriesButton" mnemonicParsing="false" onAction="#addToSeries" prefHeight="27.0" prefWidth="109.0" text="Add To Series" />
+                                    <Button mnemonicParsing="false" onAction="#edit" text="Edit" />
+                                    <Button fx:id="delete" mnemonicParsing="false" onAction="#deleteThisEvent" prefHeight="27.0" prefWidth="127.0" text="Delete This Event" />
+                                </items>
+                              </ToolBar>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="514.0" prefWidth="652.0">
+                           <children>
+                              <SplitPane dividerPositions="0.5007112375533428" prefHeight="521.0" prefWidth="757.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <TitledPane animated="false" prefHeight="528.0" prefWidth="374.0" text="Memos">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="352.0">
+                                                   <children>
+                                                      <ListView fx:id="memoListView" layoutX="-6.0" prefHeight="489.0" prefWidth="381.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </TitledPane>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="512.0" prefWidth="454.0">
+                                       <children>
+                                          <TitledPane prefHeight="206.0" prefWidth="373.0" text="Tags">
+                                             <content>
+                                                <ListView fx:id="tagListView" prefHeight="178.0" prefWidth="356.0" />
+                                             </content>
+                                          </TitledPane>
+                                          <TitledPane animated="false" layoutX="-3.0" layoutY="206.0" prefHeight="308.0" prefWidth="381.0" text="Alerts">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="352.0">
+                                                   <children>
+                                                      <ListView fx:id="alertListView" prefHeight="281.0" prefWidth="381.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </TitledPane>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
